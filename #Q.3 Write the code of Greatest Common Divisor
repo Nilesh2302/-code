@@ -1,0 +1,13 @@
+#Q.3 Write the code of Greatest Common Divisor
+# the GCD of two numbers is the largest positive integer that both numbers can be divided by evenly. It is often used in various mathematical computations and algorithms.
+
+# For example, the GCD of 12 and 18 is 6 because 6 is the largest number that divides both 12 and 18 without leaving a remainder. The divisors of 12 are 1, 2, 3, 4, 6, and 12, and the divisors of 18 are 1, 2, 3, 6, 9, and 18. The greatest number that appears in both lists is 6.
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+a = int(input("a: "))
+b = int(input("b: "))
+print(f"The GCD of {a} and {b} is: {gcd(a, b)}")
