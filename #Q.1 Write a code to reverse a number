@@ -1,0 +1,18 @@
+#Q.1 Write a code to reverse a number
+n = int(input("Enter a number : "))
+
+#soln 1 : Using Typecasting
+# s = str(n)
+# s = s[::-1]
+# n = int(s)
+# print(n)
+
+
+#soln 2 using digit separation and 
+ans = 0
+for i in range(len(str(n))):
+    temp = n%10
+    ans = ans*10 + temp
+    n = n//10
+
+print(ans)    
